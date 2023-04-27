@@ -53,11 +53,11 @@ namespace ActiveRagdoll {
 
         private void Start() {
             _joints = _activeRagdoll.Joints;
-            _animatedBones = _activeRagdoll.AnimatedBones;
-            _animatorHelper = _activeRagdoll.AnimatorHelper;
-            Animator = _activeRagdoll.AnimatedAnimator;
+            _animatedBones = _activeRagdoll.AnimatedBones;//动画骨骼
+            _animatorHelper = _activeRagdoll.AnimatorHelper;//动画帮助类
+            Animator = _activeRagdoll.AnimatedAnimator;//动画控制器
 
-            _initialJointsRotation = new Quaternion[_joints.Length];
+            _initialJointsRotation = new Quaternion[_joints.Length];//关节初始旋转
             for (int i = 0; i < _joints.Length; i++) {
                 _initialJointsRotation[i] = _joints[i].transform.localRotation;
             }
