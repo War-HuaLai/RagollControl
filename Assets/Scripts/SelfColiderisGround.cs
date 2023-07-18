@@ -14,7 +14,8 @@ public class SelfColiderisGround : MonoBehaviour
     // Update is called once per frame
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("碰撞到了");
+        //Debug.Log("碰撞到了");
+        if(other.gameObject.tag=="Ground")
         playerControl.isGround = true;
     }
 }
